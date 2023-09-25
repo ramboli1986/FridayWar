@@ -24,7 +24,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3a-9w-HjU">
-                        <rect key="frame" x="288" y="24.333333333333336" width="27" height="19.333333333333336"/>
+                        <rect key="frame" x="280" y="24.333333333333336" width="27" height="19.333333333333336"/>
                         <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -56,7 +56,7 @@
                     <constraint firstItem="jNc-nS-M3a" firstAttribute="centerY" secondItem="OVS-zF-ER0" secondAttribute="centerY" id="5Oe-DZ-TnC"/>
                     <constraint firstItem="jNc-nS-M3a" firstAttribute="leading" secondItem="OVS-zF-ER0" secondAttribute="trailing" constant="5" id="CM4-es-8ej"/>
                     <constraint firstItem="N3a-9w-HjU" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="HeN-jg-VuW"/>
-                    <constraint firstAttribute="trailing" secondItem="N3a-9w-HjU" secondAttribute="trailing" constant="16" id="Wgp-fh-z4p"/>
+                    <constraint firstAttribute="trailing" secondItem="N3a-9w-HjU" secondAttribute="trailing" constant="24" id="Wgp-fh-z4p"/>
                     <constraint firstItem="iq8-vV-gWa" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Zrm-XS-aYM"/>
                     <constraint firstItem="iq8-vV-gWa" firstAttribute="leading" secondItem="4OC-6X-iEV" secondAttribute="trailing" constant="16" id="bxN-Tn-Ufz"/>
                     <constraint firstItem="4OC-6X-iEV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="fhe-L1-RqE"/>

@@ -15,7 +15,7 @@ class DetailScoreVC: UITableViewController {
         super.viewDidLoad()
 
         navigationItem.title = "Detail"
-        navigationItem.leftBarButtonItem?.tintColor = .black
+        navigationController?.navigationBar.tintColor = .black
         tableView.register(UINib(nibName: "DetailScoreCell", bundle: nil), forCellReuseIdentifier: "DetailScoreCell")
         tableView.rowHeight = 56
         tableView.separatorStyle = .none
@@ -39,7 +39,7 @@ class DetailScoreVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return record.totalPersons
+        return record.others.count + 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

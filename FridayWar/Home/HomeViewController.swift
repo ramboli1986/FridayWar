@@ -19,7 +19,7 @@ class HomeViewController: UITableViewController {
         tableView.showsVerticalScrollIndicator = false
         tableView.rowHeight = 160
         
-        self.navigationItem.title = "Table War!"
+        self.navigationItem.title = "Who's 卷王？"
         
         DataManager.shared.updateDefaultFriendListIfNeeded()
     }
@@ -43,5 +43,12 @@ class HomeViewController: UITableViewController {
         cell.iconImageView.image = UIImage(named: imageNames[indexPath.row])
         return cell
     }
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            let gdyVC = UPNavigationViewController(rootViewController:GandengyanVC())
+            gdyVC.modalPresentationStyle = .fullScreen
+            present(gdyVC, animated: true)
+        }
+    }
 }

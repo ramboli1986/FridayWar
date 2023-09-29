@@ -12,7 +12,7 @@ class DataManager {
     
     private let onlineFriendsKey = "OnLineList"
     private let offlineFriendsKey = "OffLineList"
-    private let defaultFriends = ["Amber", "Cindy", "Tracy", "Bo", "Bochuan", "Xing"]
+    private let defaultFriends = ["Amber", "Cindy", "Tracy", "Bo", "Bochuan", "Xing", "TargetA", "TargetB"]
     
     private init() {}
     

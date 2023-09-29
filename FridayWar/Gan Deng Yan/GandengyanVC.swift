@@ -120,8 +120,18 @@ class GandengyanVC: UIViewController {
             preferredStyle: .alert // 设置样式为 alert
         )
         
+        let userTotalScores = RecordDataManager.shared.retrieveUserScores()
+        var juanwang = ""
+        var score = 0
+        for userTotalScore in userTotalScores {
+            if userTotalScore.score > score {
+                juanwang = userTotalScore.name
+                score = userTotalScore.score
+            }
+        }
+        
         let attributedString = NSMutableAttributedString(
-            string: "\n\n",
+            string: "\n\(juanwang)\n",
             attributes: [
                 // 设置字体和大小
                 NSAttributedString.Key.font: UIFont.systemFont(ofSize: 21, weight: .bold),
@@ -178,7 +188,9 @@ class GandengyanVC: UIViewController {
             UIColor(red: 231/255.0, green: 76/255.0, blue: 60/255.0, alpha: 1.0),
             UIColor(red: 52/255.0, green: 152/255.0, blue: 219/255.0, alpha: 1.0),
             UIColor(red: 0.063, green: 0.733, blue: 0.812, alpha: 1.0),
-            UIColor(red: 250/255.0, green: 201/255.0, blue: 0/255.0, alpha: 1.0)
+            UIColor(red: 250/255.0, green: 201/255.0, blue: 0/255.0, alpha: 1.0),
+            UIColor(red: 238/255.0, green: 125/255.0, blue: 49/255.0, alpha: 1.0),
+            UIColor(red: 82/255.0, green: 132/255.0, blue: 236/255.0, alpha: 1.0),
         ]
         
         let barData = BarChartData(dataSet: dataSet)

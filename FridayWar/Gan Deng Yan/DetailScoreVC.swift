@@ -48,13 +48,14 @@ class DetailScoreVC: UITableViewController {
             cell.badgeView.isHidden = false
             cell.avatarImageView.image = UIImage(named: record.winner)
             cell.nameLabel.text = record.winner
+            cell.scoreLabel.text = String(record.winnerScore)
             
         } else {
             cell.badgeView.isHidden = true
             let otherRecord = record.others[indexPath.row - 1]
             cell.avatarImageView.image = UIImage(named: otherRecord.name)
             cell.nameLabel.text = otherRecord.name
-            cell.scoreLabel.text = "-" + String(otherRecord.score)
+            cell.scoreLabel.text = String(otherRecord.score)
         }
         
         cell.rankLabel.text = String(indexPath.row + 1)

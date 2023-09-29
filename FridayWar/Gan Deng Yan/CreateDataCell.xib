@@ -38,17 +38,9 @@
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                     </textField>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkW-zP-gE4">
-                        <rect key="frame" x="277" y="27.666666666666671" width="8" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="3uM-xU-Xrm" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="BVd-nc-oxz"/>
-                    <constraint firstItem="3uM-xU-Xrm" firstAttribute="leading" secondItem="EkW-zP-gE4" secondAttribute="trailing" constant="8" id="LsW-ct-aHB"/>
-                    <constraint firstItem="EkW-zP-gE4" firstAttribute="centerY" secondItem="3uM-xU-Xrm" secondAttribute="centerY" id="Mpi-NZ-WlY"/>
                     <constraint firstItem="95b-Lk-VRd" firstAttribute="centerY" secondItem="QuO-B9-mso" secondAttribute="centerY" id="PHf-wB-g07"/>
                     <constraint firstAttribute="trailing" secondItem="3uM-xU-Xrm" secondAttribute="trailing" constant="16" id="Pke-9e-3KY"/>
                     <constraint firstItem="QuO-B9-mso" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="moZ-fd-1bV"/>

@@ -226,7 +226,7 @@ class GandengyanVC: UIViewController {
         records = RecordDataManager.shared.retrieveRecords()
         tableView.reloadData()
         setupChartData()
-        chartView.notifyDataSetChanged()
+        chartView.animate(yAxisDuration: 0.5)
     }
     
 }

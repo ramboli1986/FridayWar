@@ -17,7 +17,7 @@ class GandengyanCell: UITableViewCell {
     
     var record: Record? {
         didSet {
-            scoreLabel.text = "+" + String((record?.score ?? 0))
+            scoreLabel.text = "+" + String((record?.winnerScore ?? 0))
             timeLabel.text = record?.time
             avatarImageView.image = UIImage(named: record?.winner ?? "")
             nameLabel.text = record?.winner

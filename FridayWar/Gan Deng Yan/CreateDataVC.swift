@@ -116,7 +116,7 @@ class CreateDataVC: UITableViewController {
             RecordDataManager.shared.saveUserTotalScores(totalUserScores)
             
             userScores.removeAll { $0.name == winner }
-            record = Record(time: dateString, winner: winner, score: -winnerScore, others: userScores)
+            record = Record(time: dateString, winner: winner, winnerScore: winnerScore, others: userScores)
         }
     }
     

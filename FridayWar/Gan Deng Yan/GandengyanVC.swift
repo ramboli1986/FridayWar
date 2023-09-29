@@ -18,7 +18,7 @@ struct Record {
 }
 
 class GandengyanVC: UIViewController {
-
+    
     let chartView = BarChartView()
     let tableView = UITableView()
     var records: [Record] = [
@@ -52,10 +52,23 @@ class GandengyanVC: UIViewController {
         
         setupChartData()
         
-        let backButton = PlainImageTextButton(image: UIImage(systemName: "chevron.backward"), imageColor: .black)
+        let backButton = PlainImageTextButton(image: UIImage(systemName: "chevron.down"), imageColor: .black)
         backButton.addTarget(self, action: #selector(didTapBackButton), for: .touchUpInside)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
         navigationItem.title = "干瞪眼"
+        let winnerButton = PlainImageTextButton(image: UIImage(systemName: "chart.line.uptrend.xyaxis"), imageColor: .black)
+        winnerButton.addTarget(self, action: #selector(didTapWinnerButton), for: .touchUpInside)
+        
+        let addButton = PlainImageTextButton(image: UIImage(systemName: "plus"), imageColor: .black)
+        addButton.addTarget(self, action: #selector(didTapAddButton), for: .touchUpInside)
+        addButton.backgroundColor = UIColor(red: 251/255, green: 213/255, blue: 0, alpha: 1)
+        addButton.layer.cornerRadius = 27
+        addButton.layer.shadowColor = UIColor.black.cgColor
+        addButton.layer.shadowOffset = CGSize(width: 0, height: 2)
+        addButton.layer.shadowRadius = 4
+        addButton.layer.shadowOpacity = 0.5
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: winnerButton)
         
         let tableHeaderView = UIView()
         view.addSubview(tableHeaderView)
@@ -98,16 +111,67 @@ class GandengyanVC: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = 52
+        
+        view.addSubview(addButton)
+        
+        view.bringSubviewToFront(addButton)
+        
+        addButton.snp.makeConstraints { make in
+            make.trailing.equalTo(view.safeAreaLayoutGuide).offset(-16)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-16) // 下边距为16
+            make.width.height.equalTo(54) // 宽度和高度为64
+        }
     }
     
     @objc func didTapBackButton() {
         dismiss(animated: true)
     }
     
+    @objc func didTapWinnerButton() {
+        let alertController = UIAlertController(
+            title: "今晚卷王是:", // 设置标题
+            message: "", // 设置内容
+            preferredStyle: .alert // 设置样式为 alert
+        )
+        
+        let attributedString = NSMutableAttributedString(
+            string: "\nAmber\n",
+            attributes: [
+                // 设置字体和大小
+                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 21, weight: .bold),
+                // 设置颜色
+                NSAttributedString.Key.foregroundColor: UIColor.black
+            ]
+        )
+        
+        // 将 attributedMessage 设置为我们刚刚创建的富文本字符串
+        alertController.setValue(attributedString, forKey: "attributedMessage")
+        
+        // 2. 创建 UIAlertAction
+        let okAction = UIAlertAction(
+            title: "Got it",
+            style: .default,
+            handler: nil // 你可以在这里传入一个闭包来处理点击事件
+        )
+        
+        // 将 UIAlertAction 添加到 UIAlertController 中
+        alertController.addAction(okAction)
+        
+        // 3. 呈现 UIAlertController
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    @objc func didTapAddButton() {
+        let createVC = UPNavigationViewController(rootViewController: CreateDataVC())
+        present(createVC, animated: true)
+    }
+    
     func setupChartData() {
         let xAxis = chartView.xAxis
         xAxis.labelPosition = .bottom
         xAxis.labelFont = .systemFont(ofSize: 11)
+        
+        
         let yVals  = [
             BarChartDataEntry(x: 0.0, y: -23),
             BarChartDataEntry(x: 1.0, y: -43),
@@ -116,7 +180,9 @@ class GandengyanVC: UIViewController {
             BarChartDataEntry(x: 4.0, y: 56),
             BarChartDataEntry(x: 5.0, y: -23)
         ]
+        
         let dataSet: BarChartDataSet! = BarChartDataSet(entries: yVals, label: "Friends")
+        dataSet.valueFont = .systemFont(ofSize: 12, weight: .medium)
         dataSet.colors = [
             UIColor(red: 46/255.0, green: 204/255.0, blue: 113/255.0, alpha: 1.0),
             UIColor(red: 241/255.0, green: 196/255.0, blue: 115/255.0, alpha: 1.0),
@@ -131,7 +197,7 @@ class GandengyanVC: UIViewController {
         
         chartView.data = barData
     }
-
+    
 }
 
 extension GandengyanVC: UITableViewDelegate, UITableViewDataSource {

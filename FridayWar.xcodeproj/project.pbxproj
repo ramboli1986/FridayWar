@@ -32,6 +32,9 @@
 		E8E76B012AC104AB00413974 /* DetailScoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E76B002AC104AB00413974 /* DetailScoreVC.swift */; };
 		E8E76B042AC1059F00413974 /* DetailScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E76B022AC1059E00413974 /* DetailScoreCell.swift */; };
 		E8E76B052AC1059F00413974 /* DetailScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8E76B032AC1059F00413974 /* DetailScoreCell.xib */; };
+		E8E76B072AC1241700413974 /* CreateDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E76B062AC1241700413974 /* CreateDataVC.swift */; };
+		E8E76B0A2AC1274800413974 /* CreateDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E76B082AC1274800413974 /* CreateDataCell.swift */; };
+		E8E76B0B2AC1274800413974 /* CreateDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8E76B092AC1274800413974 /* CreateDataCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +64,9 @@
 		E8E76B002AC104AB00413974 /* DetailScoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScoreVC.swift; sourceTree = "<group>"; };
 		E8E76B022AC1059E00413974 /* DetailScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScoreCell.swift; sourceTree = "<group>"; };
 		E8E76B032AC1059F00413974 /* DetailScoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailScoreCell.xib; sourceTree = "<group>"; };
+		E8E76B062AC1241700413974 /* CreateDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDataVC.swift; sourceTree = "<group>"; };
+		E8E76B082AC1274800413974 /* CreateDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDataCell.swift; sourceTree = "<group>"; };
+		E8E76B092AC1274800413974 /* CreateDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateDataCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,9 @@
 				E8E76B002AC104AB00413974 /* DetailScoreVC.swift */,
 				E8E76B022AC1059E00413974 /* DetailScoreCell.swift */,
 				E8E76B032AC1059F00413974 /* DetailScoreCell.xib */,
+				E8E76B062AC1241700413974 /* CreateDataVC.swift */,
+				E8E76B082AC1274800413974 /* CreateDataCell.swift */,
+				E8E76B092AC1274800413974 /* CreateDataCell.xib */,
 			);
 			path = "Gan Deng Yan";
 			sourceTree = "<group>";
@@ -240,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8E76ACA2AC0CE1500413974 /* LaunchScreen.storyboard in Resources */,
+				E8E76B0B2AC1274800413974 /* CreateDataCell.xib in Resources */,
 				E8E76AC72AC0CE1500413974 /* Assets.xcassets in Resources */,
 				E8E76AE92AC0CE9E00413974 /* HomeTableViewCell.xib in Resources */,
 				E8E76AEF2AC0CE9E00413974 /* FriendsCell.xib in Resources */,
@@ -258,6 +268,7 @@
 			files = (
 				E8E76AEB2AC0CE9E00413974 /* AppDelegate.swift in Sources */,
 				E8E76AFE2AC0F47B00413974 /* GandengyanCell.swift in Sources */,
+				E8E76B072AC1241700413974 /* CreateDataVC.swift in Sources */,
 				E8E76AE72AC0CE9E00413974 /* HomeViewController.swift in Sources */,
 				E8E76AEC2AC0CE9E00413974 /* SceneDelegate.swift in Sources */,
 				E8E76AED2AC0CE9E00413974 /* TabBarController.swift in Sources */,
@@ -266,6 +277,7 @@
 				E8E76AEE2AC0CE9E00413974 /* FriendsViewController.swift in Sources */,
 				E8E76AF02AC0CE9E00413974 /* FriendsCell.swift in Sources */,
 				E8E76AFB2AC0E6F800413974 /* PlainImageTextButton.swift in Sources */,
+				E8E76B0A2AC1274800413974 /* CreateDataCell.swift in Sources */,
 				E8E76B012AC104AB00413974 /* DetailScoreVC.swift in Sources */,
 				E8E76AD52AC0CE8200413974 /* DataManager.swift in Sources */,
 				E8E76AE62AC0CE9E00413974 /* HomeTableViewCell.swift in Sources */,

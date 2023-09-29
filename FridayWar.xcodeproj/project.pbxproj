@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E87A218A2AC6934100CB2E0F /* RecordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A21892AC6934100CB2E0F /* RecordDataManager.swift */; };
 		E8E76AC22AC0CE1300413974 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E76AC02AC0CE1300413974 /* Main.storyboard */; };
 		E8E76AC52AC0CE1300413974 /* FridayWar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E8E76AC32AC0CE1300413974 /* FridayWar.xcdatamodeld */; };
 		E8E76AC72AC0CE1500413974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8E76AC62AC0CE1500413974 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E87A21892AC6934100CB2E0F /* RecordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDataManager.swift; sourceTree = "<group>"; };
 		E8E76AB72AC0CE1300413974 /* FridayWar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FridayWar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E76AC12AC0CE1300413974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8E76AC42AC0CE1300413974 /* FridayWar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FridayWar.xcdatamodel; sourceTree = "<group>"; };
@@ -102,11 +104,12 @@
 		E8E76AB92AC0CE1300413974 /* FridayWar */ = {
 			isa = PBXGroup;
 			children = (
+				E8E76AD22AC0CE8200413974 /* Constants.swift */,
+				E8E76AD32AC0CE8200413974 /* DataManager.swift */,
+				E87A21892AC6934100CB2E0F /* RecordDataManager.swift */,
 				E8E76ADD2AC0CE9E00413974 /* Foundation */,
 				E8E76AE22AC0CE9E00413974 /* Friends VC */,
 				E8E76AD62AC0CE9E00413974 /* Home */,
-				E8E76AD22AC0CE8200413974 /* Constants.swift */,
-				E8E76AD32AC0CE8200413974 /* DataManager.swift */,
 				E8E76AD92AC0CE9E00413974 /* Gan Deng Yan */,
 				E8E76ADC2AC0CE9E00413974 /* Avalon */,
 				E8E76AC02AC0CE1300413974 /* Main.storyboard */,
@@ -274,6 +277,7 @@
 				E8E76AED2AC0CE9E00413974 /* TabBarController.swift in Sources */,
 				E8E76AC52AC0CE1300413974 /* FridayWar.xcdatamodeld in Sources */,
 				E8E76AE82AC0CE9E00413974 /* GandengyanVC.swift in Sources */,
+				E87A218A2AC6934100CB2E0F /* RecordDataManager.swift in Sources */,
 				E8E76AEE2AC0CE9E00413974 /* FriendsViewController.swift in Sources */,
 				E8E76AF02AC0CE9E00413974 /* FriendsCell.swift in Sources */,
 				E8E76AFB2AC0E6F800413974 /* PlainImageTextButton.swift in Sources */,

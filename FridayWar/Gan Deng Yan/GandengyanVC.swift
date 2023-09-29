@@ -9,27 +9,11 @@ import UIKit
 import DGCharts
 import SnapKit
 
-
-struct Record {
-    var time: String = ""
-    var winner: String = ""
-    var score: Int = 0
-    var others: [(name:String, score:Int)] = []
-}
-
 class GandengyanVC: UIViewController {
     
     let chartView = BarChartView()
     let tableView = UITableView()
-    var records: [Record] = [
-        Record(time: "10.24pm", winner: "Bo", score: 10, others: [("Tracy", 10), ("Amber", 12), ("Cindy", 20), ("Bochuan", 10), ("Xing", 10)]),
-        Record(time: "10.24pm", winner: "Bo", score: 10, others: [("Tracy", 10), ("Amber", 12), ("Cindy", 20), ("Bochuan", 10), ("Xing", 10)]),
-        Record(time: "10.24pm", winner: "Bo", score: 10, others: [("Tracy", 10), ("Amber", 12), ("Cindy", 20), ("Bochuan", 10), ("Xing", 10)]),
-        Record(time: "10.24pm", winner: "Bo", score: 10, others: [("Tracy", 10), ("Amber", 12), ("Cindy", 20), ("Bochuan", 10), ("Xing", 10)]),
-        Record(time: "10.24pm", winner: "Bo", score: 10, others: [("Tracy", 10), ("Amber", 12), ("Cindy", 20), ("Bochuan", 10), ("Xing", 10)]),
-        Record(time: "10.24pm", winner: "Bo", score: 10, others: [("Tracy", 10), ("Amber", 12), ("Cindy", 20), ("Bochuan", 10), ("Xing", 10)]),
-        Record(time: "10.24pm", winner: "Bo", score: 10, others: [("Tracy", 10), ("Amber", 12), ("Cindy", 20), ("Bochuan", 10), ("Xing", 10)])
-    ]
+    var records: [Record] = RecordDataManager.shared.retrieveRecords()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,11 +28,13 @@ class GandengyanVC: UIViewController {
         chartView.pinchZoomEnabled = false
         chartView.highlightFullBarEnabled = false
         chartView.animate(xAxisDuration: 1.4, yAxisDuration: 1.4)
-        
-        chartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: DataManager.shared.onlineFriends())
         chartView.leftAxis.enabled = false
         chartView.rightAxis.enabled = false
         chartView.xAxis.drawGridLinesEnabled = false
+        
+        let xAxis = chartView.xAxis
+        xAxis.labelPosition = .bottom
+        xAxis.labelFont = .systemFont(ofSize: 11)
         
         setupChartData()
         
@@ -135,7 +121,7 @@ class GandengyanVC: UIViewController {
         )
         
         let attributedString = NSMutableAttributedString(
-            string: "\nAmber\n",
+            string: "\n\n",
             attributes: [
                 // 设置字体和大小
                 NSAttributedString.Key.font: UIFont.systemFont(ofSize: 21, weight: .bold),
@@ -162,24 +148,27 @@ class GandengyanVC: UIViewController {
     }
     
     @objc func didTapAddButton() {
-        let createVC = UPNavigationViewController(rootViewController: CreateDataVC())
+        let createVC = UPNavigationViewController(rootViewController: CreateDataVC(rootVC: self))
         present(createVC, animated: true)
     }
     
     func setupChartData() {
-        let xAxis = chartView.xAxis
-        xAxis.labelPosition = .bottom
-        xAxis.labelFont = .systemFont(ofSize: 11)
+        let onlineFrineds = DataManager.shared.onlineFriends()
+        chartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: onlineFrineds)
         
-        
-        let yVals  = [
-            BarChartDataEntry(x: 0.0, y: -23),
-            BarChartDataEntry(x: 1.0, y: -43),
-            BarChartDataEntry(x: 2.0, y: 14),
-            BarChartDataEntry(x: 3.0, y: 12),
-            BarChartDataEntry(x: 4.0, y: 56),
-            BarChartDataEntry(x: 5.0, y: -23)
-        ]
+        var yVals:[BarChartDataEntry] = []
+        let userTotalScores = RecordDataManager.shared.retrieveUserScores()
+        for (index, friend) in onlineFrineds.enumerated() {
+            for userScore in userTotalScores {
+                if userScore.name == friend {
+                    yVals.append(BarChartDataEntry(x: Double(index), y: Double(userScore.score)))
+                    break
+                }
+            }
+        }
+        if yVals.count != onlineFrineds.count {
+            print("xxxxxxxx Error xxxxxxxxxx")
+        }
         
         let dataSet: BarChartDataSet! = BarChartDataSet(entries: yVals, label: "Friends")
         dataSet.valueFont = .systemFont(ofSize: 12, weight: .medium)
@@ -196,6 +185,48 @@ class GandengyanVC: UIViewController {
         barData.barWidth = 0.8
         
         chartView.data = barData
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+        return true
+    }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            let alertController = UIAlertController(
+                title: "", // 设置标题
+                message: "确定要清空左右记录吗？", // 设置内容
+                preferredStyle: .alert // 设置样式为 alert
+            )
+            
+            // 2. 创建 UIAlertAction
+            let okAction = UIAlertAction(
+                title: "OK",
+                style: .default) { action in
+                    RecordDataManager.shared.cleanUpAllRecords()
+                    self.reloadAllData()
+                }
+            
+            let cancelAction = UIAlertAction(
+                title: "Cancel",
+                style: .cancel,
+                handler: nil // 你可以在这里传入一个闭包来处理点击事件
+            )
+            
+            // 将 UIAlertAction 添加到 UIAlertController 中
+            alertController.addAction(okAction)
+            alertController.addAction(cancelAction)
+            
+            // 3. 呈现 UIAlertController
+            present(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    func reloadAllData() {
+        records = RecordDataManager.shared.retrieveRecords()
+        tableView.reloadData()
+        setupChartData()
+        chartView.notifyDataSetChanged()
     }
     
 }

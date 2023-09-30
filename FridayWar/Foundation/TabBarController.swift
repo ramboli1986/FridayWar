@@ -24,7 +24,7 @@ class TabBarController: UITabBarController {
     
     func setupTabbar() {
         
-        let nvHome = UPNavigationViewController(rootViewController: HomeViewController())
+        let nvHome = UPNavigationViewController(rootViewController: GandengyanVC())
         
         let nvFriends = UPNavigationViewController(rootViewController: FriendsViewController())
         

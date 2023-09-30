@@ -17,6 +17,7 @@ class GandengyanVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        DataManager.shared.updateDefaultFriendListIfNeeded()
         view.backgroundColor = .white
         view.addSubview(chartView)
         chartView.snp.makeConstraints { make in
@@ -38,11 +39,8 @@ class GandengyanVC: UIViewController {
         
         setupChartData()
         
-        let backButton = PlainImageTextButton(image: UIImage(systemName: "chevron.down"), imageColor: .black)
-        backButton.addTarget(self, action: #selector(didTapBackButton), for: .touchUpInside)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
         navigationItem.title = "干瞪眼"
-        let winnerButton = PlainImageTextButton(image: UIImage(systemName: "chart.line.uptrend.xyaxis"), imageColor: .black)
+        let winnerButton = PlainImageTextButton(image: UIImage(systemName: "figure.snowboarding"), imageColor: .black)
         winnerButton.addTarget(self, action: #selector(didTapWinnerButton), for: .touchUpInside)
         
         let addButton = PlainImageTextButton(image: UIImage(systemName: "plus"), imageColor: .black)
@@ -115,7 +113,7 @@ class GandengyanVC: UIViewController {
     
     @objc func didTapWinnerButton() {
         let alertController = UIAlertController(
-            title: "今晚卷王是:", // 设置标题
+            title: "今晚顺王", // 设置标题
             message: "", // 设置内容
             preferredStyle: .alert // 设置样式为 alert
         )
@@ -131,7 +129,7 @@ class GandengyanVC: UIViewController {
         }
         
         let attributedString = NSMutableAttributedString(
-            string: "\n\(juanwang)\n",
+            string: "\n🎉\(juanwang)🎉\n",
             attributes: [
                 // 设置字体和大小
                 NSAttributedString.Key.font: UIFont.systemFont(ofSize: 21, weight: .bold),

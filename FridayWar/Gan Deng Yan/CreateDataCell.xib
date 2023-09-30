@@ -30,7 +30,7 @@
                             <constraint firstAttribute="height" constant="36" id="zBE-Xg-dKW"/>
                         </constraints>
                     </imageView>
-                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="score" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3uM-xU-Xrm">
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="扣分" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3uM-xU-Xrm">
                         <rect key="frame" x="293" y="21" width="64" height="34"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="64" id="xKP-ek-S3V"/>

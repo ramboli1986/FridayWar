@@ -41,7 +41,7 @@ class RecordDataManager {
         
         do {
             let records = try JSONDecoder().decode([Record].self, from: data)
-            return records
+            return records.reversed()
         } catch {
             print("Error decoding Records: \(error)")
             return []

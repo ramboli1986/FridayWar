@@ -20,8 +20,6 @@ class HomeViewController: UITableViewController {
         tableView.rowHeight = 160
         
         self.navigationItem.title = "Who's 卷王？"
-        
-        DataManager.shared.updateDefaultFriendListIfNeeded()
     }
 
     // MARK: - Table view data source

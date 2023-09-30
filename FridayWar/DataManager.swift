@@ -12,7 +12,8 @@ class DataManager {
     
     private let onlineFriendsKey = "OnLineList"
     private let offlineFriendsKey = "OffLineList"
-    private let defaultFriends = ["Amber", "Cindy", "Tracy", "Bo", "Bochuan", "Xing", "TargetA", "TargetB"]
+    private let defaultFriends = ["Amber", "Cindy", "Tracy", "Bo", "Bochuan", "Xing"]
+    private let backupList = ["TargetA", "TargetB"]
     
     private init() {}
     
@@ -21,6 +22,7 @@ class DataManager {
         if onlineFriends().count == 0 {
             // 更新为默认值
             UserDefaults.standard.set(defaultFriends, forKey: onlineFriendsKey)
+            UserDefaults.standard.set(backupList, forKey: offlineFriendsKey)
         }
     }
     

@@ -32,7 +32,7 @@ class TabBarController: UITabBarController {
         
         guard let items = tabBar.items else {return}
         tabBar.tintColor = .black
-        let images = ["house", "person.2"]
+        let images = ["chart.line.uptrend.xyaxis", "person.2"]
         
         for (index, tabBarItem) in items.enumerated() {
             tabBarItem.image = UIImage(systemName: images[index], withConfiguration: UIImage.SymbolConfiguration(pointSize: 0, weight: .bold, scale: .large))

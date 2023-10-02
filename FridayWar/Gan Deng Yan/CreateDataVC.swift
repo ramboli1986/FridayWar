@@ -59,7 +59,7 @@ class CreateDataVC: UITableViewController {
         } else {
             let alertController = UIAlertController(
                 title: "Error", // 设置标题
-                message: "Something wrong", // 设置内容
+                message: "You need to fill in the scores for everyone except the winner; the winner's score will be tallied automatically.", // 设置内容
                 preferredStyle: .alert // 设置样式为 alert
             )
             

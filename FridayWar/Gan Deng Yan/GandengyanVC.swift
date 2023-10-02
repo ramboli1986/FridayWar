@@ -26,6 +26,8 @@ class GandengyanVC: UIViewController {
             make.top.equalToSuperview().offset(84)
         }
         
+        chartView.doubleTapToZoomEnabled = false
+        chartView.highlightPerTapEnabled = false
         chartView.pinchZoomEnabled = false
         chartView.highlightFullBarEnabled = false
         chartView.animate(xAxisDuration: 1.4, yAxisDuration: 1.4)
@@ -182,13 +184,13 @@ class GandengyanVC: UIViewController {
         dataSet.valueFont = .systemFont(ofSize: 12, weight: .medium)
         dataSet.colors = [
             UIColor(red: 46/255.0, green: 204/255.0, blue: 113/255.0, alpha: 1.0),
-            UIColor(red: 241/255.0, green: 196/255.0, blue: 115/255.0, alpha: 1.0),
+            .orange,
             UIColor(red: 231/255.0, green: 76/255.0, blue: 60/255.0, alpha: 1.0),
             UIColor(red: 52/255.0, green: 152/255.0, blue: 219/255.0, alpha: 1.0),
             UIColor(red: 0.063, green: 0.733, blue: 0.812, alpha: 1.0),
             UIColor(red: 250/255.0, green: 201/255.0, blue: 0/255.0, alpha: 1.0),
-            UIColor(red: 238/255.0, green: 125/255.0, blue: 49/255.0, alpha: 1.0),
             UIColor(red: 82/255.0, green: 132/255.0, blue: 236/255.0, alpha: 1.0),
+            UIColor(red: 238/255.0, green: 125/255.0, blue: 49/255.0, alpha: 1.0),
         ]
         
         let barData = BarChartData(dataSet: dataSet)

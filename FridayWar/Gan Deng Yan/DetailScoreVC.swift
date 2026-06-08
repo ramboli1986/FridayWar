@@ -16,7 +16,7 @@ class DetailScoreVC: UITableViewController {
 
         navigationItem.title = "Detail"
         navigationController?.navigationBar.tintColor = .black
-        tableView.register(UINib(nibName: "DetailScoreCell", bundle: nil), forCellReuseIdentifier: "DetailScoreCell")
+        tableView.register(DetailScoreCell.self, forCellReuseIdentifier: "DetailScoreCell")
         tableView.rowHeight = 56
         tableView.separatorStyle = .none
     }
@@ -46,14 +46,14 @@ class DetailScoreVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DetailScoreCell", for: indexPath) as! DetailScoreCell
         if indexPath.row == 0 {
             cell.badgeView.isHidden = false
-            cell.avatarImageView.image = UIImage(named: record.winner)
+            cell.avatarImageView.image = AppResources.image(named: record.winner)
             cell.nameLabel.text = record.winner
             cell.scoreLabel.text = String(record.winnerScore)
             
         } else {
             cell.badgeView.isHidden = true
             let otherRecord = record.others[indexPath.row - 1]
-            cell.avatarImageView.image = UIImage(named: otherRecord.name)
+            cell.avatarImageView.image = AppResources.image(named: otherRecord.name)
             cell.nameLabel.text = otherRecord.name
             cell.scoreLabel.text = String(otherRecord.score)
         }

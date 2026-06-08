@@ -8,43 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		E87A218A2AC6934100CB2E0F /* RecordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A21892AC6934100CB2E0F /* RecordDataManager.swift */; };
-		E8E76AC22AC0CE1300413974 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E76AC02AC0CE1300413974 /* Main.storyboard */; };
 		E8E76AC52AC0CE1300413974 /* FridayWar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E8E76AC32AC0CE1300413974 /* FridayWar.xcdatamodeld */; };
 		E8E76AC72AC0CE1500413974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8E76AC62AC0CE1500413974 /* Assets.xcassets */; };
-		E8E76ACA2AC0CE1500413974 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E76AC82AC0CE1500413974 /* LaunchScreen.storyboard */; };
 		E8E76AD42AC0CE8200413974 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E76AD22AC0CE8200413974 /* Constants.swift */; };
 		E8E76AD52AC0CE8200413974 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E76AD32AC0CE8200413974 /* DataManager.swift */; };
 		E8E76AE62AC0CE9E00413974 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E76AD72AC0CE9E00413974 /* HomeTableViewCell.swift */; };
 		E8E76AE72AC0CE9E00413974 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E76AD82AC0CE9E00413974 /* HomeViewController.swift */; };
 		E8E76AE82AC0CE9E00413974 /* GandengyanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E76ADA2AC0CE9E00413974 /* GandengyanVC.swift */; };
-		E8E76AE92AC0CE9E00413974 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8E76ADB2AC0CE9E00413974 /* HomeTableViewCell.xib */; };
 		E8E76AEA2AC0CE9E00413974 /* UPNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E76ADE2AC0CE9E00413974 /* UPNavigationViewController.swift */; };
 		E8E76AEB2AC0CE9E00413974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E76ADF2AC0CE9E00413974 /* AppDelegate.swift */; };
+		E8E76B0C2AC1274800413974 /* AppResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E76B0D2AC1274800413974 /* AppResources.swift */; };
 		E8E76AEC2AC0CE9E00413974 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E76AE02AC0CE9E00413974 /* SceneDelegate.swift */; };
 		E8E76AED2AC0CE9E00413974 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E76AE12AC0CE9E00413974 /* TabBarController.swift */; };
 		E8E76AEE2AC0CE9E00413974 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E76AE32AC0CE9E00413974 /* FriendsViewController.swift */; };
-		E8E76AEF2AC0CE9E00413974 /* FriendsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8E76AE42AC0CE9E00413974 /* FriendsCell.xib */; };
 		E8E76AF02AC0CE9E00413974 /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E76AE52AC0CE9E00413974 /* FriendsCell.swift */; };
 		E8E76AF32AC0D37200413974 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = E8E76AF22AC0D37200413974 /* DGCharts */; };
 		E8E76AF92AC0E45900413974 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E8E76AF82AC0E45900413974 /* SnapKit */; };
 		E8E76AFB2AC0E6F800413974 /* PlainImageTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E76AFA2AC0E6F800413974 /* PlainImageTextButton.swift */; };
 		E8E76AFE2AC0F47B00413974 /* GandengyanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E76AFC2AC0F47B00413974 /* GandengyanCell.swift */; };
-		E8E76AFF2AC0F47B00413974 /* GandengyanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8E76AFD2AC0F47B00413974 /* GandengyanCell.xib */; };
 		E8E76B012AC104AB00413974 /* DetailScoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E76B002AC104AB00413974 /* DetailScoreVC.swift */; };
 		E8E76B042AC1059F00413974 /* DetailScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E76B022AC1059E00413974 /* DetailScoreCell.swift */; };
-		E8E76B052AC1059F00413974 /* DetailScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8E76B032AC1059F00413974 /* DetailScoreCell.xib */; };
 		E8E76B072AC1241700413974 /* CreateDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E76B062AC1241700413974 /* CreateDataVC.swift */; };
 		E8E76B0A2AC1274800413974 /* CreateDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E76B082AC1274800413974 /* CreateDataCell.swift */; };
-		E8E76B0B2AC1274800413974 /* CreateDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8E76B092AC1274800413974 /* CreateDataCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E87A21892AC6934100CB2E0F /* RecordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDataManager.swift; sourceTree = "<group>"; };
 		E8E76AB72AC0CE1300413974 /* FridayWar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FridayWar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8E76AC12AC0CE1300413974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8E76AC42AC0CE1300413974 /* FridayWar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FridayWar.xcdatamodel; sourceTree = "<group>"; };
 		E8E76AC62AC0CE1500413974 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E8E76AC92AC0CE1500413974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8E76ACB2AC0CE1500413974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8E76AD12AC0CE8100413974 /* FridayWar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FridayWar-Bridging-Header.h"; sourceTree = "<group>"; };
 		E8E76AD22AC0CE8200413974 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -52,23 +44,19 @@
 		E8E76AD72AC0CE9E00413974 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		E8E76AD82AC0CE9E00413974 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E8E76ADA2AC0CE9E00413974 /* GandengyanVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GandengyanVC.swift; sourceTree = "<group>"; };
-		E8E76ADB2AC0CE9E00413974 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		E8E76ADE2AC0CE9E00413974 /* UPNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPNavigationViewController.swift; sourceTree = "<group>"; };
 		E8E76ADF2AC0CE9E00413974 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8E76AE02AC0CE9E00413974 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E8E76AE12AC0CE9E00413974 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		E8E76B0D2AC1274800413974 /* AppResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppResources.swift; sourceTree = "<group>"; };
 		E8E76AE32AC0CE9E00413974 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
-		E8E76AE42AC0CE9E00413974 /* FriendsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsCell.xib; sourceTree = "<group>"; };
 		E8E76AE52AC0CE9E00413974 /* FriendsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
 		E8E76AFA2AC0E6F800413974 /* PlainImageTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainImageTextButton.swift; sourceTree = "<group>"; };
 		E8E76AFC2AC0F47B00413974 /* GandengyanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GandengyanCell.swift; sourceTree = "<group>"; };
-		E8E76AFD2AC0F47B00413974 /* GandengyanCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GandengyanCell.xib; sourceTree = "<group>"; };
 		E8E76B002AC104AB00413974 /* DetailScoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScoreVC.swift; sourceTree = "<group>"; };
 		E8E76B022AC1059E00413974 /* DetailScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScoreCell.swift; sourceTree = "<group>"; };
-		E8E76B032AC1059F00413974 /* DetailScoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailScoreCell.xib; sourceTree = "<group>"; };
 		E8E76B062AC1241700413974 /* CreateDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDataVC.swift; sourceTree = "<group>"; };
 		E8E76B082AC1274800413974 /* CreateDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDataCell.swift; sourceTree = "<group>"; };
-		E8E76B092AC1274800413974 /* CreateDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateDataCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +100,7 @@
 				E8E76AD62AC0CE9E00413974 /* Home */,
 				E8E76AD92AC0CE9E00413974 /* Gan Deng Yan */,
 				E8E76ADC2AC0CE9E00413974 /* Avalon */,
-				E8E76AC02AC0CE1300413974 /* Main.storyboard */,
 				E8E76AC62AC0CE1500413974 /* Assets.xcassets */,
-				E8E76AC82AC0CE1500413974 /* LaunchScreen.storyboard */,
 				E8E76ACB2AC0CE1500413974 /* Info.plist */,
 				E8E76AC32AC0CE1300413974 /* FridayWar.xcdatamodeld */,
 				E8E76AD12AC0CE8100413974 /* FridayWar-Bridging-Header.h */,
@@ -127,7 +113,6 @@
 			children = (
 				E8E76AD72AC0CE9E00413974 /* HomeTableViewCell.swift */,
 				E8E76AD82AC0CE9E00413974 /* HomeViewController.swift */,
-				E8E76ADB2AC0CE9E00413974 /* HomeTableViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -137,13 +122,10 @@
 			children = (
 				E8E76ADA2AC0CE9E00413974 /* GandengyanVC.swift */,
 				E8E76AFC2AC0F47B00413974 /* GandengyanCell.swift */,
-				E8E76AFD2AC0F47B00413974 /* GandengyanCell.xib */,
 				E8E76B002AC104AB00413974 /* DetailScoreVC.swift */,
 				E8E76B022AC1059E00413974 /* DetailScoreCell.swift */,
-				E8E76B032AC1059F00413974 /* DetailScoreCell.xib */,
 				E8E76B062AC1241700413974 /* CreateDataVC.swift */,
 				E8E76B082AC1274800413974 /* CreateDataCell.swift */,
-				E8E76B092AC1274800413974 /* CreateDataCell.xib */,
 			);
 			path = "Gan Deng Yan";
 			sourceTree = "<group>";
@@ -160,6 +142,7 @@
 			children = (
 				E8E76ADE2AC0CE9E00413974 /* UPNavigationViewController.swift */,
 				E8E76ADF2AC0CE9E00413974 /* AppDelegate.swift */,
+				E8E76B0D2AC1274800413974 /* AppResources.swift */,
 				E8E76AE02AC0CE9E00413974 /* SceneDelegate.swift */,
 				E8E76AE12AC0CE9E00413974 /* TabBarController.swift */,
 				E8E76AFA2AC0E6F800413974 /* PlainImageTextButton.swift */,
@@ -171,7 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				E8E76AE32AC0CE9E00413974 /* FriendsViewController.swift */,
-				E8E76AE42AC0CE9E00413974 /* FriendsCell.xib */,
 				E8E76AE52AC0CE9E00413974 /* FriendsCell.swift */,
 			);
 			path = "Friends VC";
@@ -251,14 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8E76ACA2AC0CE1500413974 /* LaunchScreen.storyboard in Resources */,
-				E8E76B0B2AC1274800413974 /* CreateDataCell.xib in Resources */,
 				E8E76AC72AC0CE1500413974 /* Assets.xcassets in Resources */,
-				E8E76AE92AC0CE9E00413974 /* HomeTableViewCell.xib in Resources */,
-				E8E76AEF2AC0CE9E00413974 /* FriendsCell.xib in Resources */,
-				E8E76AC22AC0CE1300413974 /* Main.storyboard in Resources */,
-				E8E76AFF2AC0F47B00413974 /* GandengyanCell.xib in Resources */,
-				E8E76B052AC1059F00413974 /* DetailScoreCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8E76AEB2AC0CE9E00413974 /* AppDelegate.swift in Sources */,
+				E8E76B0C2AC1274800413974 /* AppResources.swift in Sources */,
 				E8E76AFE2AC0F47B00413974 /* GandengyanCell.swift in Sources */,
 				E8E76B072AC1241700413974 /* CreateDataVC.swift in Sources */,
 				E8E76AE72AC0CE9E00413974 /* HomeViewController.swift in Sources */,
@@ -292,25 +268,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		E8E76AC02AC0CE1300413974 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E8E76AC12AC0CE1300413974 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E8E76AC82AC0CE1500413974 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E8E76AC92AC0CE1500413974 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E8E76ACC2AC0CE1500413974 /* Debug */ = {
@@ -440,8 +397,7 @@
 				INFOPLIST_FILE = FridayWar/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FridayWar;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -475,8 +431,7 @@
 				INFOPLIST_FILE = FridayWar/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FridayWar;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (

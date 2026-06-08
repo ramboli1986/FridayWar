@@ -14,7 +14,7 @@ class FriendsViewController: UITableViewController {
 
         self.navigationItem.title = "Friends"
         
-        tableView.register(UINib(nibName: "FriendsCell", bundle: nil), forCellReuseIdentifier: "FriendsCell")
+        tableView.register(FriendsCell.self, forCellReuseIdentifier: "FriendsCell")
         tableView.separatorStyle = .none
         tableView.rowHeight = 80
     }
@@ -52,7 +52,7 @@ class FriendsViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsCell", for: indexPath) as! FriendsCell
         let name = indexPath.section == 0 ? onlines[indexPath.row] : offlines[indexPath.row]
         cell.nameLabel.text = name
-        cell.avatarImageView.image = UIImage(named: name)
+        cell.avatarImageView.image = AppResources.image(named: name)
         return cell
     }
     

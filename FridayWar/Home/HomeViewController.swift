@@ -14,7 +14,7 @@ class HomeViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeTableViewCell")
+        tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: "HomeTableViewCell")
         tableView.separatorColor = .clear
         tableView.showsVerticalScrollIndicator = false
         tableView.rowHeight = 160
@@ -38,7 +38,7 @@ class HomeViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as! HomeTableViewCell
         cell.selectionStyle = .none
         cell.gameLabelView.text = names[indexPath.row]
-        cell.iconImageView.image = UIImage(named: imageNames[indexPath.row])
+        cell.iconImageView.image = AppResources.image(named: imageNames[indexPath.row])
         return cell
     }
     

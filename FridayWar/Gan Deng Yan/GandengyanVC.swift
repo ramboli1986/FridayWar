@@ -93,7 +93,7 @@ class GandengyanVC: UIViewController {
             make.bottom.equalToSuperview()
         }
         
-        tableView.register(UINib(nibName: "GandengyanCell", bundle: nil), forCellReuseIdentifier: "GandengyanCell")
+        tableView.register(GandengyanCell.self, forCellReuseIdentifier: "GandengyanCell")
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = 52

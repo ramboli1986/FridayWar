@@ -35,7 +35,7 @@ class CreateDataVC: UITableViewController {
         
         navigationController?.navigationBar.tintColor = .black
         
-        tableView.register(UINib(nibName: "CreateDataCell", bundle: nil), forCellReuseIdentifier: "CreateDataCell")
+        tableView.register(CreateDataCell.self, forCellReuseIdentifier: "CreateDataCell")
         tableView.separatorStyle = .none
         tableView.rowHeight = 72
         
@@ -130,7 +130,7 @@ class CreateDataVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CreateDataCell", for: indexPath) as! CreateDataCell
-        cell.avatarImageView.image = UIImage(named: onlineFriends[indexPath.row])
+        cell.avatarImageView.image = AppResources.image(named: onlineFriends[indexPath.row])
         cell.nameLabel.text = onlineFriends[indexPath.row]
         cell.selectionStyle = .none
         cell.inputTextField.tag = indexPath.row
